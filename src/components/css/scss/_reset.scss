@@ -1,0 +1,37 @@
+@import "fonts";
+@import "colors";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $fontKanit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.bg_primario {
+    background: $primario;
+}
+
+.bg_light {
+    background: #f7f7f7;
+}
+
+.sinPadding {
+    padding: 0;
+}

@@ -1,17 +1,14 @@
 import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
+import ItemCount from "./ItemCount";
 
-export default function ItemListContainer() {
+export default function itemListContainer() {
+
+    let stock = 7;
+    let initial = 1;
 
     return (
         <>
-            <Container>
-                <Row>
-                    <Col md={12}>
-                        <h2>Aquí irán los productos</h2>
-                    </Col>
-                </Row>
-            </Container>
+            <ItemCount stock={stock} initial={initial} />
         </>
     );
 }

@@ -1,12 +1,15 @@
 import React from "react";
-import ItemListContainer from "./components/ItemListContainer";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+import ItemListContainer from "./components/productos/ItemListContainer";
 import "./components/css/style.css";
 
 export default function App() {
   return (
     <>
-      <ItemListContainer />
+        <Header/>
+        <Hero/>
+        <ItemListContainer/>
     </>
   );
 }

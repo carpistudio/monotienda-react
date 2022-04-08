@@ -1,0 +1,217 @@
+@import "colors";
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    min-height: 70vh;
+
+    @include movil {
+        grid-template-columns: 1fr;
+    }
+    
+    .nombreCategoria {
+        grid-area: 1 / 1 / span 1 / span 4;
+        font-size: 2.8rem;
+
+        @include movil {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+    }
+
+    .noHayCoincidencias h4 {
+        font-size: 2.8rem;
+    }
+
+    .verTodos {
+        font-size: 2rem;
+        color: $primario;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    .producto {
+        border-radius: 2rem;
+        overflow: hidden;
+        border: .4rem solid $primario;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: .4rem;
+        padding-bottom: 1.4rem;
+        box-shadow: 0px 0px 10px #b1b1b1;
+
+        &__img {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-start;
+            background: white;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        &__titulo {
+            font-size: 1.6rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 0;
+            letter-spacing: -1px;
+
+            @include movil {
+                padding: 0 3rem;
+                font-size: 2rem;
+            }
+        }
+
+        &__precio {
+            color: $primario;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            text-align: center;
+
+            @include movil {
+                font-size: 3rem;
+            }
+        }
+
+        &__agregar {
+            font-size: 1.5rem;
+            text-align: center;
+            border: 2px solid #797979;
+            margin-bottom: .6rem;
+            border-radius: .4rem;
+            letter-spacing: -1px;
+            width: 90%;
+            padding: .5rem 0;
+            cursor: pointer;
+            transition: all .2s;
+
+            @include movil {
+                padding: 1rem 0;
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                color: white;
+                border-color: $primario;
+                background: $primario;
+            }
+        }
+
+        &__sinStock {
+            @extend .producto__agregar;
+            background: #c4c4c4;
+            color: #686868;
+            display: none;
+            cursor: not-allowed;
+
+            &:hover {
+                background: #c4c4c4;
+                color: #686868;
+                border-color: #797979;
+            }
+        }
+
+        &__whatsapp {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0;
+            background: #25d366;
+            color: white;
+            border-radius: .4rem;
+            letter-spacing: -1px;
+            width: 90%;
+            padding: .5rem 1rem;
+            cursor: pointer;
+            transition: all .2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 1rem;
+
+            @include movil {
+                padding: 2rem 0;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fa-whatsapp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            > p {
+                text-align: left;
+                line-height: 1;
+            }
+
+            &:hover {
+                color: white;
+                border-color: $primario;
+                background: $primario;
+            }
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 1.8rem;
+            font-size: 1.8rem;
+
+            &__button {
+                border: 0;
+                background: transparent;
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .noHayCoincidencias {
+        grid-area: 1 / 1 / span 1 / span 4;
+    }
+}
+
+#noQuedaStock {
+    .modal-content {
+        background: #ff4b5c;
+        color: #900;
+
+        .modal-header {
+            border-bottom-color: #900;
+
+            h5 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.toastifyToast {
+    background: $primario;
+    font-size: 1.4rem;
+
+    @include movil {
+        max-width: none;
+    }
+}

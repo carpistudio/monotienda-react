@@ -1,5 +1,6 @@
 import React from "react";
 import { TelephoneFill, Whatsapp, EnvelopeFill, Facebook, Instagram } from 'react-bootstrap-icons';
+import { Link } from "react-router-dom";
 
 export default function Middle() {
     return (
@@ -8,7 +9,7 @@ export default function Middle() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 middle__logo">
-                            <img src="logo.png" alt="Logo" />
+                            <Link to="/"><img src="/logo.png" alt="Logo" /></Link>
                         </div>
                         <div className="col-md-8 middle__searchbar">
                             <div className="middle__searchbar__contact">

@@ -27,7 +27,7 @@ import React, {useState} from "react";
         <div className="counter__counter">{counter}</div>
         <button className="counter__button counter__increase" onClick={Increase}>+</button>
     </div>
-    <div className="producto__agregar" onClick={Reset}>AGREGAR AL CARRITO</div>
+    <div className="agregar" onClick={Reset}>AGREGAR AL CARRITO</div>
     </>
   );
 }

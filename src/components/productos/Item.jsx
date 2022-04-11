@@ -1,6 +1,6 @@
 import React from "react";
-import { Whatsapp } from 'react-bootstrap-icons';
 import ItemCount from "./ItemCount";
+import { Link, NavLink } from "react-router-dom";
 
 const Item = ({ prod }) => {
   return (
@@ -12,10 +12,7 @@ const Item = ({ prod }) => {
         <h4 className="producto__titulo">{prod.titulo.toUpperCase()}</h4>
         <h4 className="producto__precio">$<span>{prod.precio}</span></h4>
         <ItemCount initial={1} stock={prod.stock}/>
-        <div className="producto__whatsapp">
-            <Whatsapp/>
-            <p>CONSULTAR POR WHATSAPP</p>
-        </div>
+        <Link className="producto__ver" to={`/producto/${prod.sku}`}>VER PRODUCTO</Link>
       </div>
     </>
   );

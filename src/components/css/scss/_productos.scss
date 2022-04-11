@@ -89,7 +89,7 @@
             }
         }
 
-        &__agregar {
+        .agregar {
             font-size: 1.5rem;
             text-align: center;
             border: 2px solid #797979;
@@ -116,8 +116,37 @@
             }
         }
 
+        &__ver {
+            font-size: 1.5rem;
+            text-align: center;
+            border: 2px solid $primario;
+            margin-bottom: .6rem;
+            border-radius: .4rem;
+            letter-spacing: -1px;
+            width: 90%;
+            padding: .5rem 0;
+            cursor: pointer;
+            transition: all .2s;
+            background: $primario;
+            color: white;
+
+            @include movil {
+                padding: 1rem 0;
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                color: #212529;
+                border-color: #797979;
+                background: white;
+            }
+        }
+
         &__sinStock {
-            @extend .producto__agregar;
+            @extend .agregar;
             background: #c4c4c4;
             color: #686868;
             display: none;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CategoriasListContainer from "../categorias/CategoriasListContainer";
 
 export default function Hero() {

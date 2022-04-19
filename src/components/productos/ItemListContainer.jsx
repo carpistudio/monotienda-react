@@ -4,7 +4,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import CategoriasListContainer from "../categorias/CategoriasListContainer";
 
-const ItemListContainer = ({}) => {
+const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
 
   const { categoria } = useParams();
@@ -20,9 +20,9 @@ const ItemListContainer = ({}) => {
 
   return (
     <>
-      <div class="container-fluid bg_light">
-        <div class="container">
-            <div class="row">
+      <div className="container-fluid bg_light">
+        <div className="container">
+            <div className="row">
                 {categoria && (
                   <CategoriasListContainer />
                 )}

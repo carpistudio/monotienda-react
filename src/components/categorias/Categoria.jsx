@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Categoria = ({ cat }) => {
   return (
     <>  
-      <li className="cat"><NavLink activeClassName="active" to={`/categoria/${cat.titulo}`}>{cat.titulo}</NavLink></li>
+      <li className="cat"><NavLink activeclassname="active" to={`/categoria/${cat.titulo}`}>{cat.titulo}</NavLink></li>
     </>
   );
 };

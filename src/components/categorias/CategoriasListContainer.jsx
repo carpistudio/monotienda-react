@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FetchCategorias } from "./Categorias";
 import CategoriasList from "./CategoriasList";
 
-const CategoriasListContainer = ({}) => {
+const CategoriasListContainer = () => {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {

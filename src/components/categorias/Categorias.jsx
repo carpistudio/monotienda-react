@@ -1,18 +1,23 @@
 const categorias = [
     {
-       titulo:"Auriculares"
+      id: 1,
+      titulo:"Auriculares"
     },
     {
-       titulo:"Calefaccion"
+      id: 2,
+      titulo:"Calefaccion"
     },
     {
-       titulo:"Celulares"
+      id: 3,
+      titulo:"Celulares"
     },
     {
-       titulo:"Electrodomesticos"
+      id: 4,
+      titulo:"Electrodomesticos"
     },
     {
-       titulo:"Parlantes"
+      id: 5,
+      titulo:"Parlantes"
     }
   ]
 

@@ -72,14 +72,6 @@ const products = [
     categoria: "Calefaccion"
   },
   {
-    sku: 9,
-    titulo: "Calefactor eléctrico convector Peabody PE-VC10 blanco 220V",
-    imagen: "/img/calefaccion/3.webp",
-    precio: 8833,
-    stock: 5,
-    categoria: "Calefaccion"
-  },
-  {
     sku: 10,
     titulo: "Calefactor eléctrico convector Peabody PE-VC10 negro 220V",
     imagen: "/img/calefaccion/4.webp",

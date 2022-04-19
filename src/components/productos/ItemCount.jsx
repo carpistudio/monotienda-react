@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
- const ItemCount = ({initial,stock}) => {
+ const ItemCount = ({ initial, stock, onAdd }) => {
     
         const [counter, setCounter] = useState(initial);
     
@@ -16,8 +16,8 @@ import React, {useState} from "react";
             }
         }
     
-        const Reset = () => {
-            setCounter(1);
+        const handleClick = () => {
+            onAdd(counter);
         }
 
   return (
@@ -27,7 +27,7 @@ import React, {useState} from "react";
         <div className="counter__counter">{counter}</div>
         <button className="counter__button counter__increase" onClick={Increase}>+</button>
     </div>
-    <div className="agregar" onClick={Reset}>AGREGAR AL CARRITO</div>
+    <div className="agregar" onClick={handleClick}>AGREGAR AL CARRITO</div>
     </>
   );
 }

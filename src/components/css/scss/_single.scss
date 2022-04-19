@@ -44,6 +44,8 @@
         cursor: pointer;
         transition: all .2s;
         display: inline-block;
+        color: #222;
+        text-transform: uppercase;
 
         @include movil {
             padding: 1rem 0;

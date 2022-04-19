@@ -500,6 +500,8 @@ header .middle__searchbar__search .searchbar__button:hover {
   cursor: pointer;
   -webkit-transition: all .2s;
   transition: all .2s;
+  color: #222;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 576px) {
@@ -726,6 +728,8 @@ header .middle__searchbar__search .searchbar__button:hover {
   -webkit-transition: all .2s;
   transition: all .2s;
   display: inline-block;
+  color: #222;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 576px) {

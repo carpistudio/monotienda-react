@@ -19,9 +19,9 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <div class="container-fluid bg_light">
-        <div class="container">
-            <div class="row">
+      <div className="container-fluid bg_light">
+        <div className="container">
+            <div className="row">
                 <CategoriasListContainer/>
                 <ItemDetail prod={producto} />
             </div>

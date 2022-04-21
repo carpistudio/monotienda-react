@@ -1,7 +1,10 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../Context";
 
- const ItemCount = ({ initial, stock, onAdd }) => {
+ const ItemCount = ({ initial, stock, prod }) => {
     
+        const { addToCart } = useContext(Context);
+
         const [counter, setCounter] = useState(initial);
     
         const Increase = () => {
@@ -17,7 +20,8 @@ import React, {useState} from "react";
         }
     
         const handleClick = () => {
-            onAdd(counter);
+            addToCart({...prod, cantidad: counter});
+            setCounter(1);
         }
 
   return (
@@ -27,7 +31,7 @@ import React, {useState} from "react";
         <div className="counter__counter">{counter}</div>
         <button className="counter__button counter__increase" onClick={Increase}>+</button>
     </div>
-    <div className="agregar" onClick={handleClick}>AGREGAR AL CARRITO</div>
+    <div className="agregar" onClick={(handleClick)}>AGREGAR AL CARRITO</div>
     </>
   );
 }

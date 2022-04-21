@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ prod }) => {
-     
-  const [number, setNumber] = useState(0);
-
-  function onAdd (counter) {
-    setNumber (counter);
-  }
 
   return (    
     <div className="col-md-9 offset-md-3 single">
@@ -22,7 +16,8 @@ const ItemDetail = ({ prod }) => {
             <h4 className="single__titulo">{prod.titulo}</h4>
             <h4 className="single__precio">$<span>{prod.precio}</span></h4>
             <div className="counter-container">
-              {  number === 0 ? <ItemCount initial={1} stock={prod.stock} onAdd={onAdd} /> : <Link to="/cart" className="agregar">Ir al carrito</Link> }
+              <ItemCount initial={1} stock={prod.stock} prod={prod} />
+              <Link to="/cart" className="agregar">Ir al carrito</Link>
             </div>
           </div>
         </div>

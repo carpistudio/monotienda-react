@@ -1,0 +1,263 @@
+@import "../scss/colors";
+@import "../scss/media-queries";
+
+.carritoContainer {
+    padding-top: 3rem;
+
+    .carritoTitulo {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}
+.carritoProductos {
+    padding-top: 3rem;
+
+    table {
+        font-size: 1.5rem;
+        border-radius: 30px;
+        overflow: hidden;
+
+        thead {
+
+            th {
+                text-align: center;
+                border-bottom: 0 !important;
+
+                &:nth-child(2) {
+                    text-align: left;
+                }
+            }
+        }
+        
+        tbody {
+            border-top-color: $primario !important;
+        }
+    }
+
+    .carritoProducto {
+
+        &__img {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        &__titulo {
+            font-size: 1.8rem;
+            vertical-align: middle;
+            padding: 0 1rem;
+
+            a {
+                color: black;
+                transition: color .1s;
+
+                &:hover {
+                    color: $primario;
+                }
+            }
+        }
+
+        &__precio {
+            font-size: 1.8rem;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        &__cantidad {
+            font-size: 1.8rem;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        &__subtotal {
+            font-size: 1.8rem;
+            font-weight: 600;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        &__eliminar {
+            font-size: 1.4rem;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 1rem;
+
+            svg {
+                fill: red;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.carritoTitulos {
+    display: grid;
+    grid-template-columns: .25fr 1fr .5fr .25fr .5fr .1fr;
+
+
+    &__tit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        padding: 1rem;
+
+        &:nth-child(2) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+
+
+
+.emptyCart {
+    width: 100%;
+    min-height: 200px;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1.8rem;
+        color: $primario;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    svg {
+        height: 30px;
+        width: 30px;
+        margin-bottom: 1rem;
+    }
+}
+
+.cartSidebar {
+
+    h4 {
+        font-size: 2.4rem;
+    }
+
+    &__top {
+        background: $primario;
+        padding: 2.4rem 3rem;
+        color: white;
+        border-radius: 30px 30px 0 0;
+    }
+
+    &__bottom {
+        background: #c63d0b;
+        padding: 2.4rem 3rem;
+        color: white;
+        border-radius: 0 0 30px 30px;
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.6rem;
+
+        .left {
+            font-weight: 600;
+        }
+        
+        .right {
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .total {
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+    }
+
+    &__buyAll {
+        width: 100%;
+        border: 0;
+        background: $primario;
+        color: white;
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 2.2rem;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+}
+
+
+#botonCarrito {
+    position: fixed;
+    z-index: 99;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 4.6rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px #b1b1b1;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s linear;
+
+    &.cerrado {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s .3s, opacity .3s linear;
+    }
+
+    .numerito {
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        background: $primario;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #numerito {
+            &.shake {
+                -webkit-animation: shake .4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                        animation: shake .4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: white;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+
+    svg {
+        fill: $primario;
+        max-width: 30px;
+        max-height: 30px;
+    }
+}

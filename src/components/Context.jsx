@@ -16,9 +16,7 @@ const ContextProvider = ({ children }) => {
         } else {
             setCart([...cart, item]);
         }
-        console.log(item);
     };
-    console.log(cart);
 
     const removeFromCart = (item) => {
         setCart(cart.filter((prod) => prod.sku !== item.sku));
@@ -26,8 +24,11 @@ const ContextProvider = ({ children }) => {
 
     const buyAll = () => setCart([]);
 
+    const cantidadTotal = cart.reduce((total, prod) => total + prod.cantidad, 0);
+    const valorTotal = cart.reduce((total, prod) => total + (prod.cantidad * prod.precio), 0);
+
     return (
-        <Context.Provider value={{cart, addToCart, removeFromCart, buyAll}}>
+        <Context.Provider value={{cart, addToCart, removeFromCart, buyAll, cantidadTotal, valorTotal}}>
             {children}
         </Context.Provider>
     );

@@ -3,7 +3,7 @@ import { Context } from "../Context";
 
  const ItemCount = ({ initial, stock, prod }) => {
     
-        const { addToCart } = useContext(Context);
+        const { cart, addToCart } = useContext(Context);
 
         const [counter, setCounter] = useState(initial);
     
@@ -24,6 +24,8 @@ import { Context } from "../Context";
             setCounter(1);
         }
 
+        const prodInCart = cart.find((cartprod) => cartprod.sku === prod.sku);
+
   return (
     <>
     <div className="counter">
@@ -31,7 +33,13 @@ import { Context } from "../Context";
         <div className="counter__counter">{counter}</div>
         <button className="counter__button counter__increase" onClick={Increase}>+</button>
     </div>
-    <div className="agregar" onClick={(handleClick)}>AGREGAR AL CARRITO</div>
+    {
+        prodInCart && prodInCart.cantidad >= prod.stock
+        ?
+        <div className="agregar sinStock">NO HAY STOCK</div>
+        :
+        <div className="agregar" onClick={(handleClick)}>AGREGAR AL CARRITO</div>
+    }
     </>
   );
 }

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import { Context } from "../Context";
 
 const ItemDetail = ({ prod }) => {
+
+  const { cantidadTotal } = useContext(Context);
 
   return (    
     <div className="col-md-9 offset-md-3 single">
@@ -17,8 +20,8 @@ const ItemDetail = ({ prod }) => {
             <h4 className="single__precio">$<span>{prod.precio}</span></h4>
             <div className="counter-container">
               <ItemCount initial={1} stock={prod.stock} prod={prod} />
-              <Link to="/cart" className="agregar">Ir al carrito</Link>
             </div>
+            {cantidadTotal > 0 ? <div><Link to="/cart" className="agregar">Ver carrito</Link></div> : null}
           </div>
         </div>
     </div>

@@ -47,6 +47,20 @@
         color: #222;
         text-transform: uppercase;
 
+        &.sinStock {
+            background: black;
+            background: #c4c4c4;
+            color: #444;
+
+            &:hover {
+                background: black;
+                background: #c4c4c4;
+                color: #444;
+                border-color: #797979;
+                cursor: default;
+            }
+        }
+
         @include movil {
             padding: 1rem 0;
             font-size: 1.8rem;

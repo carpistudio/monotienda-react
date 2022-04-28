@@ -5,24 +5,18 @@ import React from 'react'
 
 export default function FBCollection() {
 
-    const [productos, setProductos] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 
     useEffect(() => {
 
         const db = getFirestore();
+        const categoriasRef = collection(db, 'categorias');
 
-        const productosRef = collection(db, 'productos');
-
-        getDocs(productosRef).then((res) => {
-            console.log(res);
-        })
-    
-        const celuRef = doc(db, "productos", "LcJYYAihZt7h04YN2G6x");
-        getDoc(celuRef).then((res) => {
-            setProductos(res.docs.map(item => ({id: item.id, ...item.data()})));
+        getDocs(categoriasRef).then((res) => {
+            setCategorias(res.docs.map(item => ({id: item.id, ...item.data()})));
         });
 
-    }, [])
+    }, []);
     
 
     return (

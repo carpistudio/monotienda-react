@@ -11,7 +11,7 @@ const Item = ({ prod }) => {
         </div>
         <h4 className="producto__titulo">{prod.titulo.toUpperCase()}</h4>
         <h4 className="producto__precio">$<span>{prod.precio}</span></h4>
-        <Link className="producto__ver" to={`/producto/${prod.sku}`}>VER PRODUCTO</Link>
+        <Link className="producto__ver" to={`/producto/${prod.id}`}>VER PRODUCTO</Link>
       </div>
     </>
   );

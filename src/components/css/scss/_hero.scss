@@ -83,6 +83,16 @@
                     border-bottom: 0;
                 }
             }
+
+            .catCargando {
+                font-size: 1.5rem;
+                padding: 1.4rem 2rem;
+                border-bottom: 1px solid #e2e2e2;
+                cursor: pointer;
+                display: block;
+                color: inherit;
+                transition: color .3s;
+            }
         }
     }
 

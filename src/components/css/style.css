@@ -333,6 +333,17 @@ header .middle__searchbar__search .searchbar__button:hover {
   border-bottom: 0;
 }
 
+.hero__categorias__menu .catCargando {
+  font-size: 1.5rem;
+  padding: 1.4rem 2rem;
+  border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
+  display: block;
+  color: inherit;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
 .hero__slider {
   padding: 2rem 3rem;
 }

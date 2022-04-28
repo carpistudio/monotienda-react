@@ -10,7 +10,7 @@ function CartWidget() {
     return (
         <Link to="/cart">
             <div id="botonCarrito" className={cantidadTotal === 0 ? "cerrado" : ""}>
-                <div class="numerito"><div><p id="numerito">{cantidadTotal}</p></div></div>
+                <div className="numerito"><div><p id="numerito">{cantidadTotal}</p></div></div>
                 <BagCheckFill/>
             </div>
         </Link>

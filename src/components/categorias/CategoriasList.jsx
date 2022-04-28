@@ -7,9 +7,7 @@ const CategoriasList = ({ cats }) => {
         <div className="listadoCategoriasPadre">
             <ul className="hero__categorias__menu" id="listadoCategorias">
                 <li className="titulo">CATEGORÍAS</li>
-                {cats.map((cat) => (
-                <Categoria key={cat.id} cat={cat} />
-                ))}
+                {cats.length > 0 ? cats.map((cat) => (<Categoria key={cat.key} cat={cat} />)) : <li className="catCargando">Cargando...</li>}
             </ul>
         </div>
     </div>

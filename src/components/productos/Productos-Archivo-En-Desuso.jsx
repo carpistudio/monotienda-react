@@ -5,7 +5,7 @@ const products = [
     imagen: "/img/celulares/1.webp",
     precio: 33999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 2,
@@ -13,7 +13,7 @@ const products = [
     imagen: "/img/celulares/2.webp",
     precio: 124999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 3,
@@ -21,7 +21,7 @@ const products = [
     imagen: "/img/celulares/3.webp",
     precio: 12020,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 4,
@@ -29,7 +29,7 @@ const products = [
     imagen: "/img/celulares/4.webp",
     precio: 94999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 5,
@@ -37,7 +37,7 @@ const products = [
     imagen: "/img/celulares/5.webp",
     precio: 33999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 6,
@@ -45,7 +45,7 @@ const products = [
     imagen: "/img/celulares/6.webp",
     precio: 39999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 7,
@@ -53,7 +53,7 @@ const products = [
     imagen: "/img/celulares/7.webp",
     precio: 35999,
     stock: 5,
-    categoria: "Celulares"
+    categoria: "celulares"
   },
   {
     sku: 8,
@@ -61,7 +61,7 @@ const products = [
     imagen: "/img/calefaccion/1.webp",
     precio: 5138,
     stock: 5,
-    categoria: "Calefaccion"
+    categoria: "calefaccion"
   },
   {
     sku: 9,
@@ -69,7 +69,7 @@ const products = [
     imagen: "/img/calefaccion/2.webp",
     precio: 20990,
     stock: 5,
-    categoria: "Calefaccion"
+    categoria: "calefaccion"
   },
   {
     sku: 10,
@@ -77,7 +77,7 @@ const products = [
     imagen: "/img/calefaccion/4.webp",
     precio: 8833,
     stock: 5,
-    categoria: "Calefaccion"
+    categoria: "calefaccion"
   },
   {
     sku: 11,
@@ -85,7 +85,7 @@ const products = [
     imagen: "/img/auriculares/1.webp",
     precio: 15499,
     stock: 5,
-    categoria: "Auriculares"
+    categoria: "auriculares"
   },
   {
     sku: 12,
@@ -93,7 +93,7 @@ const products = [
     imagen: "/img/auriculares/2.webp",
     precio: 4999,
     stock: 5,
-    categoria: "Auriculares"
+    categoria: "auriculares"
   },
   {
     sku: 13,
@@ -101,7 +101,7 @@ const products = [
     imagen: "/img/auriculares/3.webp",
     precio: 2766,
     stock: 5,
-    categoria: "Auriculares"
+    categoria: "auriculares"
   },
   {
     sku: 14,
@@ -109,7 +109,7 @@ const products = [
     imagen: "/img/auriculares/4.webp",
     precio: 2439,
     stock: 5,
-    categoria: "Auriculares"
+    categoria: "auriculares"
   },
   {
     sku: 15,
@@ -117,7 +117,7 @@ const products = [
     imagen: "/img/auriculares/5.webp",
     precio: 15499,
     stock: 5,
-    categoria: "Auriculares"
+    categoria: "auriculares"
   },
   {
     sku: 16,
@@ -125,7 +125,7 @@ const products = [
     imagen: "/img/parlantes/1.webp",
     precio: 1924,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 17,
@@ -133,7 +133,7 @@ const products = [
     imagen: "/img/parlantes/2.webp",
     precio: 7699,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 18,
@@ -141,7 +141,7 @@ const products = [
     imagen: "/img/parlantes/3.webp",
     precio: 46990,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 19,
@@ -149,7 +149,7 @@ const products = [
     imagen: "/img/parlantes/4.webp",
     precio: 8999,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 20,
@@ -157,7 +157,7 @@ const products = [
     imagen: "/img/parlantes/5.webp",
     precio: 3701,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 21,
@@ -165,7 +165,7 @@ const products = [
     imagen: "/img/parlantes/6.webp",
     precio: 9999,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 22,
@@ -173,7 +173,7 @@ const products = [
     imagen: "/img/parlantes/7.webp",
     precio: 12021,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 23,
@@ -181,7 +181,7 @@ const products = [
     imagen: "/img/parlantes/8.webp",
     precio: 6999,
     stock: 5,
-    categoria: "Parlantes"
+    categoria: "parlantes"
   },
   {
     sku: 24,
@@ -189,7 +189,7 @@ const products = [
     imagen: "/img/smarttv/1.webp",
     precio: 28999,
     stock: 5,
-    categoria: "Smart TV"
+    categoria: "smart-tv"
   },
   {
     sku: 25,
@@ -197,7 +197,7 @@ const products = [
     imagen: "/img/smarttv/2.webp",
     precio: 33499,
     stock: 5,
-    categoria: "Smart TV"
+    categoria: "smart-tv"
   },
   {
     sku: 26,
@@ -205,7 +205,7 @@ const products = [
     imagen: "/img/smarttv/3.webp",
     precio: 59960,
     stock: 5,
-    categoria: "Smart TV"
+    categoria: "smart-tv"
   },
   {
     sku: 27,
@@ -213,9 +213,9 @@ const products = [
     imagen: "/img/smarttv/4.webp",
     precio: 40999,
     stock: 5,
-    categoria: "Smart TV"
+    categoria: "smart-tv"
   }
-]
+];
 
 
 export const FetchProductos = (categoria) =>
@@ -235,6 +235,8 @@ export const FetchProductos = (categoria) =>
     }
   })
 };
+
+
 
 
 export const FetchProducto = (idProducto) =>

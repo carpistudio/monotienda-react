@@ -8,8 +8,11 @@ import { Context } from "../Context";
         const [counter, setCounter] = useState(initial);
     
         const Increase = () => {
-            if (counter < stock){
-                setCounter(counter + 1);
+            // Solo deja aumentar el counter si
+            //a. El producto no está en el carrito y el counter sea menor al stock
+            //b. El producto está en el carrito y el counter sea menor al stock menos esa cantidad del carrito
+            if ((!prodInCart && counter < stock) || (prodInCart && counter < stock - prodInCart.cantidad)) {
+                setCounter(counter + 1)
             }
         };
     
@@ -34,10 +37,8 @@ import { Context } from "../Context";
         <button className="counter__button counter__increase" onClick={Increase}>+</button>
     </div>
     {
-        prodInCart && prodInCart.cantidad >= prod.stock
-        ?
-        <div className="agregar sinStock">NO HAY STOCK</div>
-        :
+        prodInCart && prodInCart.cantidad + counter - 1 >= prod.stock ?
+        <div className="agregar sinStock">NO HAY STOCK</div> :
         <div className="agregar" onClick={(handleClick)}>AGREGAR AL CARRITO</div>
     }
     </>

@@ -14,7 +14,7 @@ function CartProduct({prod}) {
                 <img src={prod.imagen} alt={prod.titulo}/>
             </td>
             <td className="carritoProducto__titulo">
-                <Link to={`/producto/${prod.sku}`}>{prod.titulo}</Link>
+                <Link to={`/producto/${prod.id}`}>{prod.titulo}</Link>
             </td>
             <td className="carritoProducto__precio">
                 {prod.precio}

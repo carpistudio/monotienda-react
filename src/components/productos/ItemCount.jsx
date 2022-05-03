@@ -27,7 +27,7 @@ import { Context } from "../Context";
             setCounter(1);
         }
 
-        const prodInCart = cart.find((cartprod) => cartprod.sku === prod.sku);
+        const prodInCart = cart.find((cartprod) => cartprod.id === prod.id);
 
   return (
     <>

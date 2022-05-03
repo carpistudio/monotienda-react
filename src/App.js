@@ -8,6 +8,7 @@ import CartWidget from "./components/cart/CartWidget";
 import "./components/css/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContextProvider from "./components/Context";
+import Checkout from "./components/cart/Checkout";
 
 export default function App() {
   return (
@@ -18,9 +19,10 @@ export default function App() {
           <CartWidget/>
           <Routes>
             <Route exact path="/" element={<><Hero/><ItemListContainer/></>}/>
-            <Route exact path="/producto/:sku" element={<ItemDetailContainer/>}></Route>
+            <Route exact path="/producto/:id" element={<ItemDetailContainer/>}></Route>
             <Route exact path="/categoria/:categoria" element={<ItemListContainer/>}></Route>
             <Route exact path="/cart" element={<Cart/>}></Route>
+            <Route exact path="/checkout" element={<Checkout/>}></Route>
           </Routes>
         </BrowserRouter>
       </ContextProvider>

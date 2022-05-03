@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Context } from '../Context';
 
 function CartSidebar() {
 
-    const { buyAll, valorTotal } = useContext(Context);
+    const { valorTotal } = useContext(Context);
 
     return (
       <div className="cartSidebar">
@@ -23,9 +24,11 @@ function CartSidebar() {
                   <p className="right total">${valorTotal}</p>
               </div>
           </div>
-          <button className="cartSidebar__buyAll" onClick={buyAll}>
-              Comprar
-          </button>
+          <Link to="/checkout">
+              <button className="cartSidebar__buyAll">
+                Comprar
+              </button>
+          </Link>
       </div>
     )
 }

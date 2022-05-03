@@ -7,17 +7,17 @@ import { getFirestore, doc, getDoc } from 'firebase/firestore';
 const ItemDetailContainer = () => {
 
   const [producto, setProducto] = useState({});
-  const { sku } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
 
       const db = getFirestore();
-      const prodRef = doc(db, "productos", sku);
+      const prodRef = doc(db, "productos", id);
       getDoc(prodRef).then((res) => {
           setProducto({id: res.id, ...res.data()});
       });
 
-  }, [])
+  }, [id])
 
   return (
     <>

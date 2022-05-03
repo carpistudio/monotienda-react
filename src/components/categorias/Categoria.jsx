@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Categoria = ({ cat }) => {
   return (
     <>  
-      <li className="cat"><NavLink activeclassname="active" to={`/categoria/${cat.titulo}`}>{cat.titulo}</NavLink></li>
+      <li className="cat"><NavLink activeclassname="active" to={`/categoria/${cat.id}`}>{cat.titulo}</NavLink></li>
     </>
   );
 };

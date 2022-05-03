@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import {addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore";
 import { Context } from "../Context";
 import CheckoutThankYou from './CheckoutThankYou';
-import CheckoutForm from './CheckoutForm';
+import CheckoutForm from './CheckoutForm'
 
 function Checkout() {
 

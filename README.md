@@ -30,3 +30,6 @@ npm start
 ```
 ### Autor
 [Matías Coletta](https://www.github.com/carpistudio)
+
+### Gif de Bauti que suma puntos según Guille
+![](bauti.gif)

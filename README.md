@@ -17,6 +17,12 @@ Realizar un proyecto de e-commerce utilizando todos los conocimientos aprendidos
 - Agregar y quitar productos del carrito, seleccionando la cantidad deseada
 - Vaciar el carrito
 
+### Librerías
+- **React Bootstrap Icons** para los íconos en todo el sitio
+- **React Router Dom** para el manejo de links y rutas en el sitio
+- **Firebase** para el manejo de la base de datos
+- **Bootstrap** _vainilla_ (no-React) para los estilos generales del sitio
+
 ### Cómo utilizar el proyecto localmente
 Clonar, ingresar e instalar dependencias
 ``` bash

@@ -3,6 +3,11 @@ import { TelephoneFill, Whatsapp, EnvelopeFill, Facebook, Instagram } from 'reac
 import { Link } from "react-router-dom";
 
 export default function Middle() {
+
+    function onSubmit (e) {
+        e.preventDefault();
+    }
+
     return (
         <>
             <div className="middle">
@@ -29,7 +34,7 @@ export default function Middle() {
                                     <Instagram />
                                 </a>
                             </div>
-                            <form className="middle__searchbar__search" id="searchbarTop">
+                            <form className="middle__searchbar__search" id="searchbarTop" onSubmit={onSubmit}>
                                 <input type="text" className="searchbar__input" placeholder="Buscar productos" />
                                 <input type="submit" className="searchbar__button" value="🔎︎" />
                             </form>

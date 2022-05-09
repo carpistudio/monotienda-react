@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
-import {addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore";
+import {addDoc, collection, getFirestore, serverTimestamp, doc, updateDoc, getDoc } from "firebase/firestore";
 import { Context } from "../Context";
 import CheckoutThankYou from './CheckoutThankYou';
-import CheckoutForm from './CheckoutForm'
+import CheckoutPage from './CheckoutPage'
 
 function Checkout() {
 
@@ -30,8 +30,20 @@ function Checkout() {
 
     const sendOrder = () => {
         const db = getFirestore();
+        
+        // Actualiza stock
+        cart.forEach((prod) => {
+            const prodRef = doc(db, "productos", prod.id);
+
+            getDoc(prodRef).then((res) => {
+                updateDoc(prodRef, {
+                    "stock": res.data().stock - prod.cantidad
+                })
+            })
+        })
+        
+        // Carga la venta y vacía el carrito
         const ventasRef = collection(db, "ventas");
-    
         addDoc(ventasRef, order).then(({ id }) => {
           setCheckoutID(id);
           clearCart();
@@ -43,7 +55,7 @@ function Checkout() {
     <>
         { 
             !checkoutID ?
-            <CheckoutForm 
+            <CheckoutPage 
                 name={name}
                 email={email}
                 phone={phone}

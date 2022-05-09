@@ -9,6 +9,7 @@ import "./components/css/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContextProvider from "./components/Context";
 import Checkout from "./components/cart/Checkout";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route exact path="/cart" element={<Cart/>}></Route>
             <Route exact path="/checkout" element={<Checkout/>}></Route>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </ContextProvider>
     </>

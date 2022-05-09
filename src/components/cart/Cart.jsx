@@ -9,7 +9,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className="container carritoContainer">
+            <div className="container carritoContainer min-height-100">
                 <div className="row">
                     <div className="carritoTitulo">
                         Carrito

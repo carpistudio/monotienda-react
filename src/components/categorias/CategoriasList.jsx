@@ -1,5 +1,6 @@
 import React from "react";
 import Categoria from "./Categoria";
+import { Jelly } from '@uiball/loaders'
 
 const CategoriasList = ({ cats }) => {
   return (    
@@ -7,7 +8,11 @@ const CategoriasList = ({ cats }) => {
         <div className="listadoCategoriasPadre">
             <ul className="hero__categorias__menu" id="listadoCategorias">
                 <li className="titulo">CATEGORÍAS</li>
-                {cats.length > 0 ? cats.map((cat) => (<Categoria key={cat.key} cat={cat} />)) : <li className="catCargando">Cargando...</li>}
+                {
+                  cats.length > 0 ?
+                  cats.map((cat) => (<Categoria key={cat.key} cat={cat} />)) :
+                  <li className="catCargando"><Jelly color="#fd571b" /></li>
+                }
             </ul>
         </div>
     </div>

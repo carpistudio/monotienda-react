@@ -1,0 +1,78 @@
+@import "../scss/colors";
+@import "../scss/media-queries";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.checkoutForm {
+
+    input {
+        font-size: 1.4rem;
+
+        &::placeholder {
+            font-size: 1.4rem;
+        }
+    }
+
+    label {
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+
+    button {
+        background: $primario;
+        font-size: 1.8rem;
+        padding: .5rem 2rem;
+        color: white;
+        border: 2px solid $primario;
+        border-radius: .5rem;
+
+        &:hover {
+            background: white;
+            color: $primario;
+        }
+    }
+}
+
+.checkoutText {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+
+.checkoutThankYou {
+
+    margin-top: 3rem;
+
+    h4 {
+        font-size: 3.2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+
+        span {
+            color: $primario;
+        }
+    }
+    
+    table {
+
+        font-size: 1.4rem;
+
+        tfoot {
+
+            font-weight: 800;
+            font-size: 1.6rem;
+        }
+    }
+}
+

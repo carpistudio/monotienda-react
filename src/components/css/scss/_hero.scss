@@ -59,10 +59,6 @@
                 opacity: 1;
                 transition: all 1s;
 
-                @include movil {
-                    max-height: 0;
-                }
-
                 a {
                     font-size: 1.5rem;
                     padding: 1.4rem 2rem;
@@ -89,9 +85,11 @@
                 padding: 1.4rem 2rem;
                 border-bottom: 1px solid #e2e2e2;
                 cursor: pointer;
-                display: block;
+                display: flex;
                 color: inherit;
                 transition: color .3s;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

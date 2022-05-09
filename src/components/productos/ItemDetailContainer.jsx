@@ -3,6 +3,7 @@ import ItemDetail from "./ItemDetail";
 import CategoriasListContainer from "../categorias/CategoriasListContainer";
 import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { Jelly } from '@uiball/loaders';
 
 const ItemDetailContainer = () => {
 
@@ -21,11 +22,17 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <div className="container-fluid bg_light">
+      <div className="container-fluid bg_light  min-height-100">
         <div className="container">
             <div className="row">
-                <CategoriasListContainer/>
-                <ItemDetail prod={producto} />
+              {
+                producto.id ? 
+                <>
+                  <CategoriasListContainer/>
+                  <ItemDetail prod={producto} />
+                </>
+                : <Jelly color="#fd571b" />
+              }
             </div>
         </div>
       </div>  

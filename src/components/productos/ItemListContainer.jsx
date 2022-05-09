@@ -27,7 +27,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="container-fluid bg_light">
+      <div className="container-fluid bg_light min-height-100">
         <div className="container">
             <div className="row">
                 {categoria && (

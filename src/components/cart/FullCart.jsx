@@ -9,7 +9,7 @@ function FullCart({cart}) {
             <CartProducts cart={cart}/>
         </div>
         <div className="col-md-4">
-            <CartSidebar/>
+            <CartSidebar checkout={false}/>
         </div>
     </>
   )

@@ -1,17 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../Context';
 
-function CartSidebar() {
+function CartSidebar({checkout}) {
 
-    const { valorTotal } = useContext(Context);
+    const { valorTotal, cart } = useContext(Context);
 
     return (
       <div className="cartSidebar">
           <div className="cartSidebar__top">
               <h4>Tu pedido</h4>
-
               <div className="cartSidebar__table">
+                  {cart.map((item) => (
+                      <Fragment key={item.id}>
+                        <p className="left">{item.cantidad} x {item.titulo}</p>
+                        <p className="right">${item.precio * item.cantidad}</p>
+                      </Fragment>
+                  ))}
                   <p className="left">Subtotal</p>
                   <p className="right">${valorTotal}</p>
                   <p className="left">Envío</p>
@@ -24,11 +29,14 @@ function CartSidebar() {
                   <p className="right total">${valorTotal}</p>
               </div>
           </div>
-          <Link to="/checkout">
-              <button className="cartSidebar__buyAll">
-                Comprar
-              </button>
-          </Link>
+          {
+            !checkout &&
+            <Link to="/checkout">
+                <button className="cartSidebar__buyAll">
+                    Comprar
+                </button>
+            </Link>
+          }
       </div>
     )
 }
